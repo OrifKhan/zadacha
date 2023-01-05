@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+        android:id="@+id/glavni"
+        android:icon="@drawable/home"
+        android:orderInCategory="1"
+        android:title="" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:orderInCategory="1"
+        android:title="" />
+    <item
+        android:id="@+id/reels"
+        android:icon="@drawable/reels"
+        android:orderInCategory="1"
+        android:title="" />
+    <item
+        android:id="@+id/shop"
+        android:icon="@drawable/shop"
+        android:orderInCategory="1"
+        android:title="" />
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/user"
+        android:orderInCategory="1"
+        android:title="" />
+
+</menu>

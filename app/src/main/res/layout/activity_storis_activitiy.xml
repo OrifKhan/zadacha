@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".storis.StorisActivitiy">
+
+
+    <!-- horizoltal strok 1-->
+
+
+    <ImageView
+        android:id="@+id/imageViewseconAct"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/img1" /> />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        android:weightSum="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgprofil"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img8"
+            app:shapeAppearance="@style/shape_img"
+            app:strokeColor="#FF0048"
+            app:strokeWidth="2dp" />
+        <!--vertical text title-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="80"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/showTextStoris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Super_001_"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--vertical text title-->
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_weight="5"
+            android:src="@drawable/menu_vertical" />
+        <!--horizoltal strok 1-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7E373535"
+        android:gravity="center"
+        android:weightSum="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="88"
+            android:background="@drawable/costum_imput"
+            android:hint="   add commen"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/like" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/share" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
