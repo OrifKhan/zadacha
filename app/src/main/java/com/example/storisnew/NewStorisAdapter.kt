@@ -11,6 +11,14 @@ import com.example.storisnew.databinding.ItemStorisBinding
 class NewStorisAdapter: ListAdapter<NewStoris, NewStorisAdapter.StorisViewHolder>(NewDiffUnit()) {
   var onClickl : ((Int)->(Unit)) = {  }
 
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StorisViewHolder {
+       return StorisViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_storis,parent, false))
+    }
+
+    override fun onBindViewHolder(holder: StorisViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
     inner class StorisViewHolder(itemView: View):ViewHolder(itemView){
      val binding = ItemStorisBinding.bind(itemView)
         fun bind(image: NewStoris){
@@ -26,14 +34,6 @@ class NewStorisAdapter: ListAdapter<NewStoris, NewStorisAdapter.StorisViewHolder
 
             }
         }
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StorisViewHolder {
-       return StorisViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_storis,parent, false))
-    }
-
-    override fun onBindViewHolder(holder: StorisViewHolder, position: Int) {
-        holder.bind(getItem(position))
     }
 }
 
