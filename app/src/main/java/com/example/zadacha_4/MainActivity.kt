@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
             mutableListOf(
                 Listcotegory(
                     R.drawable.imga3,
-                    "Pitzza", "pitzzapitzzapitzzapitzzapitzzapitzza", 94.0
+                    "Pitzza", "pitzzapitzzadfodfpitzzapitzzapitzzapitzza", 94.0
                 )
             )
         )
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
 
     fun getnewItem(indexofelemen: Int? = null): MutableList<NewCotegory> {
         val list = mutableListOf(
-            NewCotegory("Комбо"),
+            NewCotegory("Комбо "),
             NewCotegory("Закуски"),
             NewCotegory("Напиток"),
             NewCotegory("Пицца")
@@ -125,7 +125,6 @@ class MainActivity : AppCompatActivity() {
             if (indexofelemen == index) {
                 newCogetory.onChecked = true
             }
-
         }
         return list
     }
