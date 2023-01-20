@@ -1,4 +1,4 @@
-package com.example.zadacha_3.search
+package com.example.zadacha_3.view.search
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,4 +1,4 @@
-package com.example.zadacha_3.search
+package com.example.zadacha_3.view.search
 
 import android.annotation.SuppressLint
 import android.content.ClipData.Item
@@ -16,25 +16,26 @@ import com.example.zadacha_3.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
-     lateinit var adaptor : Adapter
-     private lateinit var  listImage: ArrayList<Int>
+    lateinit var adaptor: Adapter
+    private lateinit var listImage: ArrayList<Int>
 
-     lateinit var binding: ActivitySearchBinding
+    lateinit var binding: ActivitySearchBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
         init()
     }
-    fun  init(){
+
+    fun init() {
         listImage = ArrayList()
-        recyclerView =findViewById(R.id.recyc_search)
+        recyclerView = findViewById(R.id.recyc_search)
         adaptor = Adapter(listImage)
-        recyclerView.layoutManager = StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL)
-        recyclerView.adapter =adaptor
+        recyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+        recyclerView.adapter = adaptor
         adaptor.itemOncklik = {
-       val intent =Intent(this,ShowImageSearch::class.java)
-            intent.putExtra("img",it)
+            val intent = Intent(this, ShowImageSearch::class.java)
+            intent.putExtra("img", it)
             startActivity(intent)
         }
         getlistSearch()
@@ -43,17 +44,17 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun getlistSearch() {
-      listImage.add(R.drawable.person3)
-      listImage.add(R.drawable.img2)
-      listImage.add(R.drawable.img11)
-      listImage.add(R.drawable.img8)
-      listImage.add(R.drawable.person4)
-      listImage.add(R.drawable.person3)
-      listImage.add(R.drawable.img10)
-      listImage.add(R.drawable.person4)
-      listImage.add(R.drawable.person3)
-      listImage.add(R.drawable.person2)
-      listImage.add(R.drawable.person1)
+        listImage.add(R.drawable.person3)
+        listImage.add(R.drawable.img2)
+        listImage.add(R.drawable.img11)
+        listImage.add(R.drawable.img8)
+        listImage.add(R.drawable.person4)
+        listImage.add(R.drawable.person3)
+        listImage.add(R.drawable.img10)
+        listImage.add(R.drawable.person4)
+        listImage.add(R.drawable.person3)
+        listImage.add(R.drawable.person2)
+        listImage.add(R.drawable.person1)
     }
 
 }

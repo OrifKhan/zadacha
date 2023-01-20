@@ -1,4 +1,4 @@
-package com.example.zadacha_3.search
+package com.example.zadacha_3.view.search
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.widget.ImageView
 import com.example.zadacha_3.R
 
 class ShowImageSearch : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_image_search)

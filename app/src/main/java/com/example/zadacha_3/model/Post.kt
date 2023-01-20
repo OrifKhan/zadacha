@@ -1,4 +1,4 @@
-package com.example.zadacha_3.posts
+package com.example.zadacha_3.model
 
 import android.media.Image
 
