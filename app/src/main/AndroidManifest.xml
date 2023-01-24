@@ -34,7 +34,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.storis.StorisActivitiy"
+            android:name=".view.storis.StoryActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

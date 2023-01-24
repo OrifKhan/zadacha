@@ -4,7 +4,6 @@ import com.example.zadacha_3.R
 import com.example.zadacha_3.model.Data
 import com.example.zadacha_3.model.Post
 import com.example.zadacha_3.model.Storis
-import com.example.zadacha_3.view.storis.StorisActivitiy
 
 class MyViewModel {
     fun getPost(): MutableList<Post> {
@@ -31,10 +30,11 @@ class MyViewModel {
         list.add(Storis(R.drawable.img6, "User6"))
         return list
     }
-    fun getList(): List<Data> {
+
+    fun getListById(id: Int): List<Data> {
         val list: List<Data>
-        val storiesActivity=StorisActivitiy()
-                when (storiesActivity.idForOnClick) {
+
+        when (id) {
             0 -> {
                 list = listOf<Data>(
                     Data(R.drawable.img2, "user"),

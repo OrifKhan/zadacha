@@ -10,7 +10,7 @@ import com.example.zadacha_3.R
 import com.example.zadacha_3.databinding.ActivityMainBinding
 import com.example.zadacha_3.view.search.SearchActivity
 import com.example.zadacha_3.model.Storis
-import com.example.zadacha_3.view.storis.StorisActivitiy
+import com.example.zadacha_3.view.storis.StoryActivity
 import com.example.zadacha_3.storis.StorisAdapter
 import com.example.zadacha_3.viewmodel.MyViewModel
 
@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: StorisAdapter
     lateinit var adaptersecon: PostAtabter
-    private var myViewModel=MyViewModel()
+    private var myViewModel = MyViewModel()
     lateinit var messenger: ImageButton
     lateinit var binding: ActivityMainBinding
-    val idForClick:Array<Int>? =null
+    val idForClick: Array<Int>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -58,9 +58,9 @@ class MainActivity : AppCompatActivity() {
         adapter.submitList(myViewModel.getStoris())
         recyclerView.adapter = adapter
         adapter.itemOnClick = {
-            val intent = Intent(this, StorisActivitiy::class.java)
-            intent.putExtra("hi",it)
+            val intent = StoryActivity.getIntent(this, it)
             startActivity(intent)
+
             val newList = mutableListOf<Storis>()
             val periodicList = adapter.currentList
 
